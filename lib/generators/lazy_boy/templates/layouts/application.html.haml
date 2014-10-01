@@ -1,0 +1,34 @@
+!!! 5
+%html{lang: "it"}
+  = render 'head'
+  %body
+    = render 'top_bar'
+    = render 'breadcrumbs'
+    #content.row
+      .large-3.medium-4.columns
+        = yield :sidebar
+        %br
+        #messages-side
+      .large-9.medium-8.columns
+        = yield
+    #myModal.reveal-modal{ data: {reveal: true}}
+    %footer.row= render 'footer'
+    :javascript
+      $(function(){ $(document).foundation(); });
+
+    .javascript
+      = yield :footer
+
+    :javascript
+      var _paq = _paq || [];
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.intranet.isprambiente.it/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', 4]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+        g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+      $(function(){ $(document).foundation(); });
+    <noscript><p><img src="http://piwik.intranet.isprambiente.it/piwik.php?idsite=4" style="border:0;" alt="" /></p></noscript>

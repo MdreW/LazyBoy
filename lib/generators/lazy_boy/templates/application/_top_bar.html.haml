@@ -1,0 +1,38 @@
+.row.collapse
+  .large-12.columns
+    %nav#nav-first.top-bar{data: {topbar: true}}
+      %ul.title-area
+        %li.name
+          %h1.primary= link_to( "ISPRA | "+t('title', scope: ''), root_path)
+        %li.toggle-topbar.menu-icon <a href=""><span>Menu</span></a>
+      %section.top-bar-section
+        %ul.right
+          = content_tag :li, link_to( current_user.label, home_user_path)
+          = content_tag :li, link_to( fa_icon('sign-out', text: 'Logout'), destroy_user_session_path, method: :delete)
+        %ul.left
+          %li= link_to( fa_icon('home', text: 'Home'), home_user_path)
+          - if current_user.secretary?
+            %li.has-dropdown
+              = link_to( fa_icon('calendar', text: t('manage', scope: 'event')), '#')
+              %ul.dropdown
+                %li= link_to( fa_icon('list-alt', text: t('summary', scope: 'event')), home_index_path)
+                %li= link_to( fa_icon('calendar', text: t('calendar', scope: 'event')), events_path)
+            %li= link_to( fa_icon('users', text: t('title', scope: 'user.index')), users_path)
+            %li.has-dropdown
+              = link_to( fa_icon('wrench', text: t('risk_and_category', scope: 'menu')), '#')
+              %ul.dropdown
+                %li= link_to( fa_icon('warning', text: t('title', scope: 'category')), categories_path)
+                %li= link_to( fa_icon('medkit', text: t('title', scope: 'risk')), risks_path)
+          - if current_user.doctor?
+            %li= link_to( fa_icon('download', text: t('new', scope: 'home.report')), home_report_path)
+          %li.has-dropdown
+            = link_to( fa_icon('question-circle', text: 'Help'), '#')
+            %ul.dropdown
+              %li.has-dropdown
+                = link_to( fa_icon('book', text: t('title', scope: 'home.books')), '#')
+                %ul.dropdown
+                  %li= link_to( fa_icon('book', text: t('title', scope: 'home.books.user')), page_path('user_manual'))
+                  %li= link_to( fa_icon('book', text: t('title', scope: 'home.books.editor')), page_path('secretary_manual')) if current_user.secretary?
+                  %li= link_to( fa_icon('book', text: t('title', scope: 'home.books.admin')), page_path('doctor_manual')) if current_user.doctor?
+              %li= link_to( fa_icon('github', text: t('title', scope: 'home.versions')), page_path('changelog'))
+              %li= link_to( fa_icon("bug", text: t('home.help.title')) , 'https://intranet.isprambiente.it/giri/new/problem/sito-intranet-segreteria-medica', :target => "_blank")
