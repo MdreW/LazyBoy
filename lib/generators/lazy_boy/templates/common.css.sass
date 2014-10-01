@@ -1,0 +1,240 @@
+nav.breadcrumbs
+  margin-bottom: 20px
+
+h1.primary, h2.primary, h3.primary, h4.primary, h5.primary, h6.primary
+  background: $primary-color
+
+a.button
+  line-height: 2rem
+  padding-top: 0px
+  padding-bottom: 0px
+
+button.button
+  line-height: 1.9rem
+  padding-top: 0px
+  padding-bottom: 0px
+
+.little
+  font-size: 80%
+
+.list
+  .row
+    margin: 0px 0px 1px 0px
+    //line-height: 2.5rem
+    .first
+      padding-left: 0.5rem
+    .last
+      padding-right: 0.5rem
+    .categories
+      font-size: 80%
+    .switch-container
+      padding-top: 0.29rem
+      .switch
+        margin-bottom: 0px
+    input
+      margin-bottom: 0px
+  a.button
+    margin: 0px
+    line-height: 2.5rem
+  h5
+    color: $primary-color
+    margin: 16px 8px 4px 8px
+
+.small-list
+  .row
+    margin: 0px 0px 1px 0px
+    line-height: 1.2rem
+    font-size: 80%
+
+#users.list .first
+  padding-left: 1rem
+
+body
+  min-width: 400px
+
+ul.breadcrumbs
+  border-radius: 0px
+
+p
+  margin-bottom: 0.5em
+
+#content
+  padding-top: 0px
+
+.dark
+  background: $dark-color
+
+.light
+  background: transparent
+
+.search_box
+  margin-bottom: $panel-margin-bottom
+  button.button.postfix.fa
+    margin: 0px
+    padding: 0px
+    border: 0px
+  input
+    margin: 0px
+    padding: 0px 5px 0px 5px
+  select
+    margin-bottom: 0px
+
+.blacked
+  background: #444
+  color: #fff
+
+.text-little
+  font-size: 80%
+
+.text-big
+  font-size: 120%
+
+.text-enfatize
+  font-weight: bold
+  
+span.primary
+  background: $primary-color
+  padding: 0em 0.5em
+span.alert
+  background: $alert-color
+  padding: 0em 0.5em
+span.alert-2
+  background: $alert-2-color
+  padding: 0em 0.5em
+span.success
+  background: $success-color
+  padding: 0em 0.5em
+span.blacked
+  background: #444
+  padding: 0em 0.5em
+
+a.button.small
+  padding: 10px 0px
+
+
+// panel
+
+ul.like-side-nav
+  margin: $side-nav-list-margin
+  padding: $side-nav-padding
+  list-style: $side-nav-list-type
+  list-style-position: $side-nav-list-position
+  font-size: $side-nav-font-size
+  list-style-position: outside
+  li
+    margin: 0px
+    padding: 0.2em 0.5em
+  li.title
+    text-align: center
+    font-size: 80%
+    font-weight: bold
+    color: #fff
+    padding: 5px
+    background: #444
+  li:first-child.title
+    margin: -15px -1px 2px -1px
+    border-radius: $global-radius $global-radius 0px 0px
+  li.last
+    padding: 0em
+    margin-bottom: -1em
+    a.button
+      padding: 0.3em 0em
+      margin: 0px
+      width: 100%
+      border-radius: 0px 0px $global-radius $global-radius
+
+// side nav
+
+ul.side-nav
+  li.active
+    background: $secondary-color
+
+ul.side-nav.panel
+  li
+    margin: 0px
+    padding: 0px
+    a
+      padding: 0.2em 0.5em
+      span.right
+        color: #000
+    a:hover
+      background: $panel-bg-hover
+
+ul.side-nav li.title
+  text-align: center
+  font-size: 80%
+  font-weight: bold
+  color: #fff
+  padding: 5px
+  background: #444
+
+ul.side-nav li:first-child.title
+  margin: -15px -1px 2px -1px
+  border-radius: $global-radius $global-radius 0px 0px
+
+#modal_nav.top-bar
+  margin: -30px -30px 15px -30px
+  a.close-reveal-modal
+    position: static
+    font-size: 13px
+    line-height: 45px
+
+// form
+input#attachment_file.file.optional
+  border: 1px solid #ccc
+  margin-bottom: 0px
+
+.data-field
+  .field-content:-moz-only-whitespace:after
+    content: '-'
+  .field-content
+    margin-bottom: 15px
+    line-height: 19px
+    border-bottom: 1px solid #ccc
+    background: #eee
+    padding-left: 5px
+
+// table
+table
+  table-layout: auto
+  width: 100%
+  border-collapse: collapse
+  thead
+    th
+      text-align: center
+    th.price, th.date, th.code
+      width: 1px
+    th.price
+      width: 110px
+    th.nop
+      padding: 0px
+      width: 45px
+  tbody
+    td.code
+      border-right: 1px solid #ddd
+      text-align: center
+      width: 105px
+    td.status
+      text-align: center
+    td.date
+      text-align: center
+      width: center
+    td.price
+      text-align: right
+      width: auto
+    td.nop
+      padding: 0px
+      a.button
+        margin: 0px
+        width: 45px
+        height: 45px
+        padding: 0px
+        line-height: 49px
+    a.button
+      margin-bottom: 0px
+      padding: 0px 3px
+
+.fa-false:before
+  content: ""
+.fa-true:before
+  content: ""

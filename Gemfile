@@ -12,3 +12,17 @@ gemspec
 
 # To use debugger
 # gem 'debugger'
+
+gem 'haml'
+gem 'simple_form'
+gem 'foundation-rails'
+gem "font-awesome-rails"
+gem 'kaminari'
+gem 'modernizr-rails'
+gem 'jquery-ui-rails'
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
+gem 'rspec-rails', group: [:development, :test]
+gem 'factory_girl_rails', group: [:development, :test]
+gem 'database_cleaner', group: [:test]
+
